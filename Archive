@@ -1,0 +1,8 @@
+number1 = "98741"
+list1 = []
+list1 = list(number1)
+
+list.sort(list1)
+number1 = "".join(list1)
+number1 = int(number1)
+print(number1)
