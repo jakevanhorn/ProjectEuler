@@ -6,7 +6,7 @@ rollAmount = []
 win = 0
 total = 0
 
-for t in range (0,1000000):
+for t in range (0,100000):
     list.clear(listRolls)
     list.clear(rollAmount)
 
