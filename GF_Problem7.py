@@ -28,6 +28,7 @@ def compareWord(word1,word2):
 num_sets = input()
 datasetinput = []
 datasets = []
+numerical = []
 alpha = []
 
 for i in range(int(num_sets)):
@@ -35,17 +36,41 @@ for i in range(int(num_sets)):
 
 datasets = datasetinput
 
-for i in range(int(num_sets)):
-    place = 0
-    lowWord = "zzz"
+for a in range(int(num_sets)):
+    bigNum = 10000
     for i in range(len(datasets)):
-        if compareWord(lowWord,datasets[i]) == 1:
-            lowWord = datasets[i]
+        holder = datasets[i].split()
+        spot = int(holder[len(holder)-1])
+        if (spot < bigNum):
+            bigNum = spot
             place = i
-        alpha.append(datasets[place])
-        datasets.pop(place)
+    numerical.append(datasets[place])
+    datasets.pop(place)
+
+for i in datasets:
+    print(i)
+
+datasets = datasetinput
 
 print()
 
-for i in alpha:
+for i in datasets:
     print(i)
+
+for a in range(len(datasetinput)):
+    place = 0
+    lowWord = "zzz"
+    for i in range(len(datasets)):
+        if compareWord(lowWord,datasets[i]) == 2:
+            lowWord = datasets[i]
+            place = i
+    alpha.append(datasets[place])
+    datasets.pop(place)
+
+# print()
+# for i in numerical:
+#     print(i)
+
+# print()
+# for i in alpha:
+#     print(i)
